@@ -1,0 +1,65 @@
+body {
+  background-color: #343434;
+}
+
+#contents {
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+	max-width: 1200px;
+}
+
+.svg__content {
+  position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* 半径250pxの円周を動く線 */
+.inner_circle {
+  stroke: teal;
+  stroke-width: 1px;
+  animation: innerCircleAnim 1.5s linear;
+  animation-iteration-count: infinite;
+  fill: transparent;
+  /* 線の間隔を指定するプロパティ。 */
+  stroke-dasharray: 98px;
+  /* 線のはじありの位置を指定するプロパティ。 */
+  stroke-dashoffset: 1570px;
+}
+@keyframes innerCircleAnim {
+  0% {
+    stroke-dashoffset: 1570px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+/* 半径280pxの円周を動く線 */
+.outer_circle {
+  stroke: teal;
+  stroke-width: 1px;
+  animation: outerCircleAnim 1.5s linear;
+  animation-iteration-count: infinite;
+  fill: transparent;
+  /* 線の間隔を指定するプロパティ。 */
+  stroke-dasharray: 110px;
+  /* 線のはじありの位置を指定するプロパティ。 */
+  stroke-dashoffset: 1764px;
+}
+@keyframes outerCircleAnim {
+  0% {
+    stroke-dashoffset: 1764px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+.text {
+  font-weight: bolder;
+  font-size: 41px;
+  fill: antiquewhite;
+}
